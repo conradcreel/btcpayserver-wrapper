@@ -19,7 +19,7 @@ ARG ARCH
 
 # install package dependencies
 RUN apt-get update && \
-  apt-get install -y sqlite3 libsqlite3-0 curl locales jq bc wget procps postgresql-common postgresql-13 xz-utils nginx vim
+  apt-get install -y curl locales jq bc wget procps postgresql-common postgresql-13 xz-utils nginx vim
 RUN wget https://github.com/mikefarah/yq/releases/download/v4.6.3/yq_linux_${PLATFORM}.tar.gz -O - |\
   tar xz && mv yq_linux_${PLATFORM} /usr/bin/yq
 
